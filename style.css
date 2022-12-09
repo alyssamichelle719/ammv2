@@ -1,15 +1,37 @@
+/* BRAND COLORS:
+
+    rgb(88,88,80)
+    rgb(123,113,104)
+    rgb(138,125,117)
+    rgb(195,198,180)
+
+*/
+
+
 @import url(bootstrap/scss/bootstrap.scss);
 
 html{
     width: 100%;
-    height: 100%;
     position: relative;
     overflow-x: hidden;
+    animation: fadein 1s;
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 body{
     background: url('images/background.jpg');
+    background-size: cover;
     margin: auto;
+    font-size: 1vw;
 }
 
 main{
@@ -19,12 +41,21 @@ main{
 
 header{
     width: 100%;
-    background-color:darkseagreen;
+    background-color: rgb(195,198,180);
     padding: 7px;
+}
+
+header > .col{
+    height: 100%;
 }
 
 header h1{
     margin-left: 5%;
+}
+
+#head_logo{
+    margin-left: 5%;
+    height: 50%;
 }
 
 nav a{
