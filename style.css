@@ -35,8 +35,20 @@ body{
 }
 
 main{
-    background-color: beige;
     padding: 7px;
+}
+
+section{
+    background-color: rgba(195, 198, 180, 0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px #555;
+}
+
+section h1{
+    text-transform: uppercase;
+    font-size: 3vw;
 }
 
 header{
@@ -56,16 +68,29 @@ nav{
     margin-top: 8%;
 }
 
-nav a{
+.navhov{
     color: rgb(138,125,117);
     text-decoration: none;
-    transition: ease-in-out 1s;
-    border-left: 2px solid rgb(138,125,117);
+    transition: transform ease-in-out 250ms;
     padding-left: 5px;
+    font-size: 1.5vw;
 }
 
-nav a:hover{
+.navhov:hover{
     color: rgb(88,88,80);
+}
+
+.navhov::after {
+    transform: scaleX(0);
+    border-bottom: 3px solid rgb(88,88,80);
+    transition: transform ease-in-out 250ms;
+    content: ''; 
+    transform-origin:  0% 50%;
+    display: block;
+}
+
+.navhov:hover::after{
+    transform: scaleX(1);
 }
 
 footer{
@@ -73,4 +98,5 @@ footer{
     background-color: beige;
     text-align: center;
     padding: 7px;
+    bottom: 0px;
 }
